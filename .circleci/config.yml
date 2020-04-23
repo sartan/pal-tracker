@@ -53,7 +53,7 @@ jobs:
 
             cf api $CF_API
             cf auth "$CF_USERNAME" "$CF_PASSWORD"
-            cf target -o "$CF_ORG" -s "$CF_SPACE_PROD"
+            cf target -o "$CF_ORG" -s "$CF_SPACE_REVIEW"
             cf push -f manifest-$ENVIRONMENT.yml
 
   deployToProd:
