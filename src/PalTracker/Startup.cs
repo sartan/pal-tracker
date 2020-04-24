@@ -63,8 +63,6 @@ namespace PalTracker
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseCloudFoundryActuators();
-
             app.UseHttpsRedirection();
 
             app.UseRouting();
@@ -75,6 +73,8 @@ namespace PalTracker
             {
                 endpoints.MapControllers();
             });
+
+            app.UseCloudFoundryActuators();
         }
     }
 }
